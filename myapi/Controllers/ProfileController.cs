@@ -20,7 +20,7 @@ namespace myapi.Controllers
 
         public ProfileController()
         {
-            _client = new MongoClient("mongodb://localhost:27017/profiles-db");
+            _client = new MongoClient("mongodb://172.17.0.2:27017/profiles-db");
             _db = _client.GetDatabase("Profiles");
             _collection = _db.GetCollection<Profile>("profiles");
         }
